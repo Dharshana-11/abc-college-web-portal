@@ -1,0 +1,111 @@
+.main
+{
+  text-align:center;
+  height:100vh; 
+  width:100%;
+  display:flex; 
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://wallpapercave.com/wp/wp11129051.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.forget_p{
+  font-size:13px;
+  color:lavender;
+  text-decoration: underline;
+  font-weight:normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%; 
+}
+.entire {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width:100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightblue;
+  height:100px;
+  color:black;
+  position:relative;
+  padding:20px;
+  padding-left:50px;
+}
+.header h2,.motto{
+  margin:10px;
+  padding: 5px !important;
+  line-height: 20px;
+}
+.motto {
+  font-size: 14px; 
+  color: #666; 
+
+}
+
+.settings_menu {
+  position: absolute;
+  top: 85%;  
+  right:2px;
+  background-color: #f0f2f5;
+  border-radius: 15px;
+  padding: 0;
+}
+
+.settings_menu .ant-menu-item {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 0; 
+  width:90px;
+}
+
+.settings_menu .ant-menu-item:hover {
+  background-color: #d9d9d9; 
+}
+
+
+.menu_class {
+  display: block;
+  padding-top: 10px;
+  padding-left: 5px;
+  text-align: left;
+  border-color: lightblue; 
+  border-style: solid; 
+  border-width: 1px; 
+}
+
+.menu_item {
+  transition:  0.3s;
+}
+.menu_item:hover {
+  background-color: #1890ff;  
+  color: white;               
+}
+.content {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+
+.footer {
+  background-color:lightblue;
+  text-align: center;
+  height:80px;
+  margin:0px;
+  padding: 0px;
+}
+
+    
