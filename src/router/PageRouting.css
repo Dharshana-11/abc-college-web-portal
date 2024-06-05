@@ -26,19 +26,27 @@ html, body {
 .entire {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh; 
   width:100%;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: lightblue;
+  /* background-color: lightblue; */
+  background-image:url("https://images.pexels.com/photos/2982449/pexels-photo-2982449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
   height:100px;
   color:black;
   position:relative;
   padding:20px;
   padding-left:50px;
+  
+}
+.header h2{
+  color: white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .header h2,.motto{
   margin:10px;
@@ -47,7 +55,7 @@ html, body {
 }
 .motto {
   font-size: 14px; 
-  color: #666; 
+  color: #f0f2f5; 
 
 }
 
@@ -58,6 +66,7 @@ html, body {
   background-color: #f0f2f5;
   border-radius: 15px;
   padding: 0;
+  z-index: 1000; /*higher priority, displays on top of table*/
 }
 
 .settings_menu .ant-menu-item {
@@ -71,16 +80,21 @@ html, body {
 .settings_menu .ant-menu-item:hover {
   background-color: #d9d9d9; 
 }
-
+.ant-table-cell {
+  border-color: #dcdcdc; 
+  border-style: solid; 
+  border-width: 1px; 
+}
 
 .menu_class {
   display: block;
   padding-top: 10px;
   padding-left: 5px;
   text-align: left;
-  border-color: lightblue; 
-  border-style: solid; 
-  border-width: 1px; 
+  border-right: #2c7ca4; 
+  border-right-style: solid; 
+  border-right-width: 1px; 
+  /* background-color: #3484ac;  */
 }
 
 .menu_item {
@@ -98,14 +112,27 @@ html, body {
   flex-direction: column;
   justify-content: center;
   background-color: white;
-}
+  overflow-y: auto;
+  }
 
 .footer {
-  background-color:lightblue;
+  /* background-color:#3c84ac; */
+  /* background-image: url("https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover; */
+  background-color:#2a79a1;
   text-align: center;
-  height:80px;
+  height:60px;
   margin:0px;
+  color: white;
   padding: 0px;
 }
-
+.footer p{
+  color:white
+}
+.footer a{
+  color:white
+}
+.footer a:hover{
+  color:yellow
+}
     

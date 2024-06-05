@@ -1,21 +1,14 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import { Table, Button } from 'antd';
+import { Table, Button, Typography } from 'antd';
 import { CaretLeftFilled } from '@ant-design/icons';
 
 
 const Details = () => {
-
-    const student_details={
-        1:{"roll_no":1, "name":"Angelin","dob":"27-03-2005","blood_group":"A1-ve","dept":"BCA"},
-        2:{"roll_no":2, "name":"Dharshana","dob":"11-03-2005","blood_group":"O+ve","dept":"B.Tech CS"},
-        3:{"roll_no":3, "name":"Guru", "dob":"23-03-2005","blood_group":"B+ve","dept":"B.Sc Maths"},
-        4:{"roll_no":4, "name":"Jeeviha","dob":"21-07-2005","blood_group":"B+ve","dept":"B.Sc CS"},
-        5:{"roll_no":5, "name":"Nithya","dob":"27-07-2004","blood_group":"AB+ve","dept":"B.Tech AI"}
-    }
-    const {id}=useParams();
-    const student_data=student_details[id]
+    const {state}=useLocation();
+    const {Title}=Typography;
+    const student_data=state.student
     const navigate=useNavigate();
     const columns=[
         {
@@ -38,8 +31,8 @@ const Details = () => {
 
     ]
   return (
-    <div style={{margin:"30px"}}>
-        <h3>Personal Details</h3>
+    <div >
+        <Title level={3} style={{textAlign:"left", margin:"10px"}}>Personal Details</Title>
         <Table columns={columns} dataSource={data} pagination={false} bordered title={()=>(<b>{student_data.name}</b>)}/><br/>
         <Button icon={<CaretLeftFilled/>} onClick={()=>navigate("/students")}>Back</Button>
     </div>
